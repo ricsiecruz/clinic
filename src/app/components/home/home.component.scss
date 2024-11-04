@@ -77,12 +77,29 @@
             &_appointment {
                 font-size: 1.125rem;
                 font-weight: 400;
-                padding: 18px 25px;
+                padding: 8px 10px 8px 22px;
                 background-color: #F46700;
                 width: fit-content;
                 color: #fff;
                 border-radius: 15px;
                 margin-top: 40px;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                svg {
+                    width: 18px;
+                    height: 18px; // Ensures the SVG keeps proportions within the container
+                    color: #0a3366;
+                }
+                &_svg {
+                    display: flex;
+                    justify-content: center; // Horizontally center
+                    align-items: center; // Vertically center
+                    background-color: #fff;
+                    border-radius: 10px;
+                    height: 44px;
+                    width: 44px;
+                }
             }
         }
     }
