@@ -1,0 +1,89 @@
+.home {
+    &_div-one {
+        background-image: url('/assets/img/bg.png');
+        background-color: #fdf5e8;
+        padding: 28px 80px;
+        &_menu {
+            display: flex;
+            column-gap: 40px;
+            div {
+                font-size: 18px;
+                padding: 28px 15px;
+                cursor: pointer;
+                font-weight: 500;
+                display: inline-block;
+                position: relative;
+                line-height: 24px;
+            }
+        }
+        &_banner {
+            display: flex;
+            &_img-two {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                object-fit: cover;
+                left: 7%;
+                position: absolute;
+                top: 18%;
+                
+                // Applying the animation
+                animation: move3 5s ease 0s infinite normal none running;
+
+                @keyframes move3 {
+                    0% { transform: translateX(0); }      // Start position
+                    50% { transform: translateX(20px); }  // Move right 20px at midpoint
+                    100% { transform: translateX(0); }    // Return to start
+                }
+            }
+            &_shape-one {
+                fill: #f46700;
+                top: 28%;
+                right: 38%;
+                position: absolute;
+                animation: rotateClockwise 20s linear infinite;
+                width: 60px;
+
+                @keyframes rotateClockwise {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        &_text {
+            animation-duration: 0.8s;
+            animation-delay: 0.2s;
+            animation-name: fadeInUp;
+            font-size: 85px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #0A3366;
+            line-height: 1.2;
+            align-self: center;
+            &_subtext {
+                margin-top: 30px;
+                padding: 12px 20px;
+                font-size: 18px;
+                width: 550px;
+                line-height: 1.5;
+                font-weight: 400;
+                border-left: 4px solid;
+                background-image: linear-gradient(45deg, rgba(10, 51, 102, 0.1), transparent 80%);
+            }
+            &_appointment {
+                font-size: 1.125rem;
+                font-weight: 400;
+                padding: 18px 25px;
+                background-color: #F46700;
+                width: fit-content;
+                color: #fff;
+                border-radius: 15px;
+                margin-top: 40px;
+            }
+        }
+    }
+}
